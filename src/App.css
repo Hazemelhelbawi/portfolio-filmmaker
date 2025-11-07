@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Thin.ttf');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-ExtraLight.ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Firacode';
+  src: url('./assets/fonts/FiraCode-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Firacode';
+  src: url('./assets/fonts/FiraCode-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Firacode';
+  src: url('./assets/fonts/FiraCode-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Firacode';
+  src: url('./assets/fonts/FiraCode-Bold.ttf');
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Raleway';
+  scroll-behavior: smooth;
+  background: url('./public/wavey.svg');
+  background-repeat: repeat;
+  background-size: auto;
+
+}
+
+#nav {
+  font-family: 'Firacode' !important;
+  font-weight: 400;
+  color: red;
+}
+
+.hex {
+  cursor: pointer;
+  fill-opacity: 0.4;
+  stroke: #000;
+  stroke-width: 3;
+}
+
+#color-fill .hex {}
+
+.loader {
+  overflow: hidden;
+}
+
+.switch {
+  width: 160px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+  background-color: rgba(242, 235, 235, 0.4);
+}
+
+.handle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.cont {
+  height: 30px;
+  width: 60px;
+  background-image: linear-gradient(to bottom, #9be2fe 0%, #67d1fb 100%);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 5px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.handle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  background-color: #FFCC02;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+
+.icon {
+  color: #f88748;
+}
+
+.cont[data-darkmode="true"] {
+  background-color: #52527a;
+  background: linear-gradient(to top, #283E51, #0A2342);
+}
+
+.cont[data-darkmode="true"] .handle {
+  background-color: transparent;
+
+}
+
+.canvas {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+
+  overflow: hidden;
+  background: linear-gradient(-90deg,
+      #e3e5e8 0%,
+      #ebe4e3 10%,
+      #e4e1e0 25%,
+      #e5cee9 45%,
+      #e1b2db 60%,
+      #e5a2d4 75%,
+      #e282bb 85%,
+      #e8398e 100%);
+}
+
+.canvas::before,
+.canvas::after,
+.canvas>.circles,
+.canvas>.circles::before,
+.canvas>.circles::after {
+  filter: blur(75px);
+}
+
+.canvas::before,
+.canvas::after {
+  position: absolute;
+  content: "";
+  width: 390px;
+  height: 390px;
+  border-radius: 100%;
+}
+
+.canvas::before {
+  background: #ffecf5;
+  top: -195px;
+  left: -195px;
+}
+
+.canvas::after {
+  background: #86e1ef;
+  right: -195px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.canvas>.circles,
+.canvas>.circles::before,
+.canvas>.circles::after {
+  border-radius: 100%;
+  position: absolute;
+}
+
+.canvas>.circles::before,
+.canvas>.circles::after {
+  content: "";
+  width: 140px;
+  height: 140px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.canvas>.circles {
+  width: 230px;
+  height: 230px;
+  background: #ffc285;
+  bottom: -60px;
+  left: 75px;
+}
+
+.canvas>.circles::before {
+  background: #8600ff;
+  left: -40%;
+}
+
+.canvas>.circles::after {
+  background: #ff0000;
+  right: -20%;
+}
