@@ -21,10 +21,10 @@ const Tab = ({
   activeItem: number;
   setterFunc: (id: number) => void;
 }) => {
-  const isActive = activeItem === content.id;
+  const isActive = activeItem === Number(content.id);
   return (
     <li
-      onClick={() => setterFunc(content.id)}
+      onClick={() => setterFunc(Number(content.id))}
       className={`relative group flex items-center gap-3 w-full px-5 py-3 rounded-xl cursor-pointer border transition-all duration-300
         ${
           isActive
