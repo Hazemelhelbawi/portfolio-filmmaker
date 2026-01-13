@@ -61,7 +61,7 @@ The film was officially selected in six film festivals and won an award at the I
     description: `A psychological short film told from the perspective of a man struggling with schizophrenia. The film blurs the line between reality and illusion, immersing the viewer inside the character’s fragmented mind and revealing the unseen layers of his perception.`,
     stack: ['Short Film', 'Psychological', 'Cinematography', 'Sound Design'],
     links: {
-      github: 'https://github.com/Hazemelhelbawi/ecommerce_task',
+      github: null,
       live: 'https://drive.google.com/file/d/1tN5xdJDbAWtLjVmrM3-QDiiZNSTEEP4p/view?usp=sharing'
     },
     thumbnail: '/Schizophrenia.png'
